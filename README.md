@@ -21,14 +21,15 @@ Spannable span = SmileUtils
         return reslist;
 
     }
-
-//初始化adapter
-ExpressionAdapter expressionAdapter = new ExpressionAdapter(this,
+    
+    
+   //初始化adapter
+   ExpressionAdapter expressionAdapter = new ExpressionAdapter(this,
                 1, reslist);
-gv_expression.setAdapter(expressionAdapter);
-gv_expression.setOnItemClickListener(this);
+   gv_expression.setAdapter(expressionAdapter);
+   gv_expression.setOnItemClickListener(this);
 
-@Override
+    @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         LogPriter.e("----------------" + position);
         String filename = expressionAdapter.getItem(position);
@@ -78,13 +79,14 @@ gv_expression.setOnItemClickListener(this);
     }
 
 
-//布局文件
-  <GridView
+  //布局文件
+    
+    <GridView
         android:id="@+id/gv_expression"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="@color/white"
         android:listSelector="@android:color/transparent"
         android:numColumns="9"
-        android:scrollbars="none" ></GridView>
+        android:scrollbars="none" />
 
